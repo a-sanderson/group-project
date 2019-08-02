@@ -51,7 +51,7 @@ class Auth extends Component {
                     <section className="formSection">
                         <div className="authFormContainer">
                         
-                            { !localStorage.token?
+                            { on?
 
                                 <>
                                     <AuthForm
@@ -73,7 +73,7 @@ class Auth extends Component {
                                         handleChange={this.handleChange}
                                         buttonText="Log In"/>
                                 </>
-                            }{ !localStorage.token?
+                            }{ on?
                                 <>
                                     <div className="accountQesNBtn">
                                         <p className="noAccount" style={{ fontWeight: "600", color: "aquamarine" }}>already have an account?</p>
