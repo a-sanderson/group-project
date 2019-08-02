@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 // Connection to DB
-mongoose.connect(process.env.MONGODB.URI || 'mongodb://localhost:27017/groupprojectdb', 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/groupprojectdb', 
 {
     useNewUrlParser: true,
     useFindAndModify: false,
