@@ -8,6 +8,7 @@
 .form{
     margin-top: 150px !important;
 }
+
 .select{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -26,12 +27,23 @@
     justify-content: center;
 }
 .link{
-    border: 5px solid white;
-    border-radius: 10px 10px; 
+    /* border: 5px solid white; */
+    border-radius: 20px 20px; 
     color:rgba(255, 255, 255, 0.849);
-    font-size: 25px;
+    font-size: 30px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    font-weight: 800px;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    border: 5px #A79344 solid;
+    /* border-radius: 10px; */
+    background:grey, transparent;
+    height: 2em;
+    box-shadow: 0px 17px 10px -10px rgba(240, 199, 199, 0.4);
 }
 .reactButton{
     position: fixed;

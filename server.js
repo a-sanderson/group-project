@@ -5,17 +5,20 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 require("dotenv").config()
 const PORT = process.env.PORT || 7000
+const path = require("path")
 const expressJwt = require('express-jwt')
 
 
 // Middleware
 app.use(morgan('dev'))
 app.use(express.json())
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 
 
 // Connection to DB
-mongoose.connect('mongodb://localhost:27017/groupprojectdb', 
+mongoose.connect(process.env.MONGODB.URI || 'mongodb://localhost:27017/groupprojectdb', 
 {
     useNewUrlParser: true,
     useFindAndModify: false,
@@ -32,7 +35,7 @@ app.use('/inventory', require('./routes/inventoryRouter.js'))
 app.use(`/auth`, require(`./routes/authRouter.js`))
 app.use(`/api/cart`, require(`./routes/cartRouter.js`))
 app.use(`/api/favorite`, require(`./routes/favoriteRouter.js`))
-// Error Handle
+//  global Error Handle
 
 app.use((err, req, res, next) => {
     console.error(err)
@@ -42,6 +45,11 @@ app.use((err, req, res, next) => {
     }
     return res.send({ message: err.message })
 })
+
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 // Server listen
 app.listen(PORT, () => {

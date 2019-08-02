@@ -22,7 +22,7 @@ class CartCard extends Component{
     }
     
     handleDelete = () => {
-        this.props.deleteFromCart(this.props.item )
+        this.props.deleteFromCart(this.props.item)
     }
     
 

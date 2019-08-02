@@ -50,8 +50,8 @@ class Auth extends Component {
                 </div>
                     <section className="formSection">
                         <div className="authFormContainer">
-                        {/* <Toggle render={({on, toggler}) => */}
-                            { !on ?
+                        
+                            { !localStorage.token?
 
                                 <>
                                     <AuthForm
@@ -63,7 +63,7 @@ class Auth extends Component {
                                         buttonText="sign up"/>
 
                                 </>
-                            :    
+                            :   
                                 <>
                                     <AuthForm
                                         className="authForm"
@@ -73,8 +73,24 @@ class Auth extends Component {
                                         handleChange={this.handleChange}
                                         buttonText="Log In"/>
                                 </>
+                            }{ !localStorage.token?
+                                <>
+                                    <div className="accountQesNBtn">
+                                        <p className="noAccount" style={{ fontWeight: "600", color: "aquamarine" }}>already have an account?</p>
+                                        <button className="cardButton" onClick={toggler}>Click to sign in</button>
+                                    </div>
+                                </>
+                            :
+                                <>
+
+                                    <div className="accountQesNBtn">
+                                        <p className="noAccount" style={{fontSize: "2em" , fontWeight: "600", color: "aquamarine" }}>dont have an account??</p>
+                                        <button className="cardButton" onClick={toggler}>Click to sign up</button>
+                                    </div>
+
+                                </>
+
                             }
-                                <div style={{paddingBottom: "10px;", display: "flex", alignItems: "center"}}><p className="noAccount" style={{fontSize: "2em" , fontWeight: "600", color: "aquamarine" }}>Not have an account yet? No worries!</p><button className="cardButton" onClick={toggler}>Click to sign up</button></div>
                         </div>
                     </section>
                 <Footer></Footer>

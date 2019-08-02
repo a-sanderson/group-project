@@ -18,7 +18,7 @@ const AuthForm = props => {
             value = {password}
             onChange = {handleChange}
             placeholder = 'Password' />
-            <button>{buttonText}</button>
+            <button className="cardButton" style={{fontWeight: "600"}}>{buttonText}</button>
         </form>
     )
 }
