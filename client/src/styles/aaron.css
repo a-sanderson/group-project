@@ -197,7 +197,7 @@
     align-items: center;
     justify-content: space-evenly;
     /* position: absolute; */
-    top: 450px;
+    top: 350px;
 
 }
 .authForm > input{
@@ -225,6 +225,8 @@
     align-items: flex-end;
     justify-content: space-evenly;
     align-self: flex-end;
+    position:relative;
+    top: 200px;
 }
 .burger{
     display:none;
