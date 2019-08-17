@@ -18,8 +18,15 @@
 }
 .clothe {
     color: white;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    padding-top: 50px;
+    font-size: 2.5em;
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;    
 }
 .mapped{
     margin-top: 20px;

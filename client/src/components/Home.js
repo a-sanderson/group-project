@@ -41,8 +41,8 @@ class Home extends Component {
 
              <main>
                     <div className = "home">
-                        <h1> Our title </h1>
-                        <h2 className="clothe">Shop for Clothes</h2>
+                       
+                        <h2 className="clothe">Fashion Hub</h2>
                         <form onSubmit={this.handleSubmit} className="form">
                             <select className="select" name="gender" onChange={this.handleChange}> 
                                 <option value="none"> - Select a Gender - </option>

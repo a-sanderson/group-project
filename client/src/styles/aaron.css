@@ -99,11 +99,7 @@
     justify-content: space-between !important;
 
 }
-.authForm{
-    position: fixed;
-    top: 200px;
 
-}
 .heroHeader{
     width: 100%;
     height: 350px;
@@ -176,12 +172,12 @@
 }
 
 .formSection{
-    background-image: url("https://rlv.zcache.ca/eat_sleep_shop_repeat_tote_bag-r8d3ad38ca86641f5a55f443231920617_v9w6h_8byvr_307.jpg?rvtype=content");
-    background-size: contain;
-    background-position: center center;
-    height: 700px;
+    /* background-image: url("https://rlv.zcache.ca/eat_sleep_shop_repeat_tote_bag-r8d3ad38ca86641f5a55f443231920617_v9w6h_8byvr_307.jpg?rvtype=content"); */
+    /* background-size: contain;
+    background-position: center center; */
+    height: 500px;
     width:100vw;
-    position: absolute;
+    /* position: absolute; */
 }
 .authFormContainer{
     display: flex;
@@ -222,11 +218,11 @@
 .accountQesNBtn{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     justify-content: space-evenly;
-    align-self: flex-end;
+    /* align-self: flex-end; */
     position:relative;
-    top: 200px;
+    top: 80px;
 }
 .burger{
     display:none;

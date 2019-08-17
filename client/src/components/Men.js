@@ -34,12 +34,6 @@ class Men extends React.Component{
 
         </div>
         
-        {this.props.inventory.map(item => <ItemCard key = {Results._id} 
-                                                    favorites = {item.favorites} 
-                                                    brand = {item.brand} 
-                                                    image = {item.imgUrl} 
-                                                    price = {item.price} 
-                                                    Object = {item}/> )}
         <Footer></Footer>
        
     </div>

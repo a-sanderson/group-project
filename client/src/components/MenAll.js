@@ -2,6 +2,7 @@ import React from "react"
 import {withInventory} from "../context/InventoryProvider.js"
 import ItemCard from './ItemCard.js'
 import Results from "./Results.js";
+import Footer from "./Footer.js"
 
 class AllMen extends React.Component{
     constructor(props){
@@ -17,15 +18,17 @@ class AllMen extends React.Component{
     }
     render(){
     return(
-    <div className = "men">
-        <div className="heroHeader">
-            <h2>Men's Fashion</h2>
-            <h5>All the most popular retro kicks, outerware, and more</h5>
-        </div>
-        This is the men page 
+        <main>
+                <div className="resultsList">
+                    
+                    {this.props.inventory.map(item => <ItemCard key={item._id} favorites={item.favorites} brand={item.brand} image={item.imgUrl} price={item.price} object={item}/> )}
+                    
+                </div>
+                <Footer></Footer>
+            </main> 
         
-        {this.props.inventory.map(item => <ItemCard key={item._id} favorites={item.favorites} brand={item.brand} image={item.imgUrl} price={item.price} object={item}/> )}
-    </div>
+        
+    
     )
     }
 }
