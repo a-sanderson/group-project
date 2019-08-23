@@ -14,6 +14,7 @@ import About from "./components/About.js"
 import Example from "./components/Contact.js"
 import AllMen from "./components/MenAll.js"
 import AllWomen from "./components/AllWomen.js"
+import {withUser} from "./context/UserProvider.js"
 // import ProtectedRoute from "./shared/ProtectedRoute.js"
 
 
@@ -27,7 +28,9 @@ const App = props => {
             <Route path="/about" render= {routerProps => <About {...routerProps} />} />
             <Route path="/contact" render= {routerProps => <Example {...routerProps} />} />
             <Route path="/results" render = {routerProps => <Results {...routerProps} />} />
-            <Route path="/loginsignup" render= {routerProps => <Auth {...routerProps}/> }/>
+            <Route path="/loginsignup" render= {routerProps => !props.token? 
+                                                                <Auth {...routerProps}/>:
+                                                                <Redirect to= "/" /> }/>
             <Route path="/hotitems" render = {routerProps => <HotItems {...routerProps} /> } />
             <Route exact path="/men" render = {routerProps => <Men {...routerProps} /> } />
             <Route path="/allmen" render = {routerProps => <AllMen {...routerProps} /> } />
@@ -55,4 +58,4 @@ const App = props => {
     )
 }
 
-export default App
+export default withUser(App)

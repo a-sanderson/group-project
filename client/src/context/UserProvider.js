@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios"
+
 const UserContext = React.createContext()
 
 const userAxios = axios.create()
@@ -68,6 +69,7 @@ class UserProvider extends Component {
             console.log(user)
             localStorage.setItem("user", JSON.stringify(user))
             this.setState({ user, token})
+            
         })
         .catch(err => console.log(err))
     }

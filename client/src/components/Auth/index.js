@@ -3,6 +3,7 @@ import AuthForm from "./AuthForm.js"
 import { withUser } from "../../context/UserProvider.js"
 import Toggle from "../../shared/toggler.js"
 import Footer from "../../components/Footer.js"
+import { faCentercode } from "@fortawesome/free-brands-svg-icons";
 
 
 class Auth extends Component {
@@ -29,18 +30,23 @@ class Auth extends Component {
     }
 
 
-    handleLoginSubmit = e => {
+    handleLoginSubmit = async e => {
         e.preventDefault()
         const creds = {
             username: this.state.username,
             password: this.state.password
         }
-        this.props.login(creds)
+        await this.props.login(creds)
+        this.setState({
+            username: '',
+            password: ''
+        })
     }
     
     
     render(){
         console.log(this.props)
+      
         return(
             <Toggle render={({on, toggler}) =>
             <main>
