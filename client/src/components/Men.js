@@ -2,8 +2,7 @@ import React from "react"
 import {withInventory} from "../context/InventoryProvider.js"
 import {Link} from "react-router-dom"
 import Footer from "./Footer.js"
-import ItemCard from './ItemCard.js'
-import Results from "./Results.js";
+
 
 class Men extends React.Component{
     constructor(props){

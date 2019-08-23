@@ -21,8 +21,7 @@ class BrowseResults extends Component {
     
     render(){
         console.log(this.props)
-        const user = JSON.parse(localStorage.getItem("user"))
-        const userId = user._id
+        
         
        
     const mappedResults = this.props.inventory.map(result => {

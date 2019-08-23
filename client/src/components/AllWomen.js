@@ -3,7 +3,7 @@ import {withInventory} from "../context/InventoryProvider.js"
 import ItemCard from './ItemCard.js'
 import Footer from "./Footer.js"
 
-class AllMen extends React.Component{
+class AllWomen extends React.Component{
     constructor(props){
         // console.log(props)
         super(props)
@@ -13,7 +13,7 @@ class AllMen extends React.Component{
     }
     componentDidMount(){
         
-        this.props.getAllMenInventory(this.props.item)
+        this.props.getAllWomenInventory(this.props.item)
     }
     render(){
     return(
@@ -32,4 +32,4 @@ class AllMen extends React.Component{
     }
 }
 
-export default withInventory(AllMen)
+export default withInventory(AllWomen)
